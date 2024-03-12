@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: reCAPTCHA Enterprise Demo
+server:
+  port: 8080
+
+
+reCAPTCHA:
+  # https://console.cloud.google.com/apis/credentials
+  api-key: ""
+  # https://console.cloud.google.com/security/recaptcha
+  project-id: ""
+  site-key: ""
+  http-proxy:
+    ip: ""
+    port:
