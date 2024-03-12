@@ -28,10 +28,13 @@ reCAPTCHA:
 3. Test reCAPTCHA
 
 ```shell
+cd reCAPTCHA-Enterprise-Demo
+# Start server
 cd reCAPTCHA-Server
 mvn package
 java -jar target/reCAPTCHA-Server-0.0.1-SNAPSHOT.jar
-cd ../reCAPTCHA-Web
+# Start web
+cd reCAPTCHA-Web
 pnpm install
 pnpm dev
 ```
