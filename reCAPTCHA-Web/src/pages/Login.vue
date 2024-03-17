@@ -56,7 +56,7 @@
 <script setup lang="ts">
 declare const grecaptcha: any
 import request from '@/utils/request';
-import { getCurrentInstance, ref } from 'vue';
+import { getCurrentInstance, onMounted, ref } from 'vue';
 
 const datasitekey = getCurrentInstance()?.appContext.config.globalProperties.$siteKey
 
@@ -81,6 +81,11 @@ const userLogin = async () => {
     alert(response.data.msg)
     grecaptcha.enterprise.reset();
 }
+onMounted(() => {
+    let script = document.createElement('script')
+    script.setAttribute("src", "https://www.google.com/recaptcha/api.js")
+    document.body.appendChild(script)
+})
 </script>
 
 <style scoped>
